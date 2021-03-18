@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+
+<head>
+	<!-- linking css file with html file -->
+  <link rel="stylesheet" th:href="@{style5.css}">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta charset="UTD-8" ; <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+
+	<title>Home</title>
+
+</head>
+ 
+<script>
+   
+   function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+	td = tr[i].getElementsByTagName("td")[1];
+	if (td) {
+	  txtValue = td.textContent || td.innerText;
+	  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		tr[i].style.display = "";
+	  } else {
+		tr[i].style.display = "none";
+	  }
+	}
+  }
+}
+		
+</script>		
+
+<body>
+
+	<section class="app">
+
+    <div class="navbar">
+      <img style = "float:left;margin:0;"  src="source_images/logo.png">
+    
+      
+      <div class="dropdown">
+        <button class="dropbtn">Tables
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="/allaccounts">All accounts</a>
+          <a href="/allregisteredproducts">All products</a>
+          <a href="/allbids">All bids</a>
+        
+        </div>
+      </div>
+    
+      
+       <div style="float:right;" class="dropdown">
+        <button class="dropbtn">Account
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+        <a href="/adminlogout">Log out</a>
+        </div>
+      </div>
+      
+    </div>
+    
+
+
+		<div class="mainbody">
+
+
+			
+			<div class="header">
+				<h1>All accounts</h1>
+			</div>
+
+			
+				
+			<div id="inputContainer">
+				<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+			</div>
+
+		
+
+
+
+
+			<table id="myTable"  >
+				<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Password</th>
+				<th>Address</th>		
+				<th>Email</th>
+				<th>Card number</th>
+				</tr>
+				
+        <tr th:each="n : ${accounts}" >
+            <td th:text="${n.id}" ></td>
+            <td th:text="${n.username}" ></td>
+            <td th:text="${n.password}" ></td>
+            <td th:text="${n.address}" ></td>
+            <td th:text="${n.email}" ></td>
+            <td th:text="${n.cardnumber}" ></td>
+        </tr>
+          
+				
+			  </table>
+
+
+
+		</div>
+
+
+
+
+	</section>
+
+</body>
+
+</html>

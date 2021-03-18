@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<!-- linking css file with html file -->
+	<link rel="stylesheet" th:href="@{style2.css}">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta charset="UTD-8" ; <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<title>All products</title>
+
+</head>
+
+<script>
+	function submitForm( par ) {
+		document.getElementById("myValue").value = par  ;
+		document.getElementById('form-id').submit();
+		
+	}
+
+
+	
+
+</script>
+
+<body>
+
+	<section class="app">
+
+
+		<!--Top Navigation bar-->
+		
+		<div class="navbar">
+			<img style = "float:left;margin:0;"  src="source_images/logo.png">
+		  
+			<a href="/allproducts">Home</a>
+			
+			<div class="dropdown">
+			  <button class="dropbtn">Buyer
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="/mybids">My bids</a>
+			  </div>
+			</div>
+		  
+			  <div class="dropdown">
+			  <button class="dropbtn">Seller
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="/registerproduct">Register product</a>
+				<a href="/myregisteredproducts">My products</a>
+			  </div>
+			</div>
+		  
+			
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+			
+			
+			 <div style="float:right;" class="dropdown">
+			  <button class="dropbtn">Account
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="/editprofile">Edit profile</a>
+				<a href="#">Liked</a>
+				<a href="#">Wallet</a>
+				<a href="/logout">Log out</a>
+			  </div>
+			</div>
+			
+		  </div>
+		  
+
+		
+		<!--end of Top Navigation bar-->
+
+
+    <div class="mainbody">
+
+		
+            
+    <div style = "position: relative;" class="box">   
+		
+	
+
+		<div id= "myDiv" class="row" th:each="n : ${continents}" >
+							
+			<form id = "form-id" th:action="@{/Id}" th:object="${Id}" method="post">
+				<input style="display: none;" type="text" id = "myValue" th:field="*{mid}" placeholder="Enter Username" name="uname" required><br /> 
+			</form>
+				
+			<div class="columnimg" >		
+				<img src="source_images/2.png" alt="Snow" style="width:98%;height: 98%;">
+			</div>
+			
+			
+				
+				<div class="column" th:id="${n.id}" onclick="submitForm(this.id)" >
+					<input id = "myValue1" type = "hidden" th:value="${n.id}"  >
+						
+					<h2 id="name" th:text="${n.name}" >   </h2>
+					<p th:text="${n.desc}" >     </p>
+					<span data-prefix>Minimum bid:</span><span style=" color:green;" th:text="${n.minimum}" >  </span> 
+					<br/>
+					<br/>
+					
+					<span data-prefix>Bid ending date:</span><span th:text="${n.endingDate}" >10/12/2020  </span> 
+					<br/>
+					<br/>
+					
+					<span data-prefix>Current maximum bid:</span><span style=" color:red;margin-bottom: 10px;" th:text="${n.Current}" >  </span> 
+				
+				</div>
+			
+
+			<hr>
+					
+		</div>
+            
+
+    
+
+	</div>
+
+</div>
+
+
+
+
+</section>
+
+</body>
+</html>
+

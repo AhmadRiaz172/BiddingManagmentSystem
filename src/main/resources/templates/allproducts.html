@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+
+<head>
+	<!-- linking css file with html file -->
+	<link rel="stylesheet" th:href="@{style2.css}>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta charset="UTD-8" ; <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+	<title>All products</title>
+
+</head>
+
+
+<body>
+
+	<section class="app">
+
+
+		<!--Top Navigation bar-->
+
+		<div class="navbar">
+			<div class="dropdown">
+				<button class="dropbtn">Ahmad Riaz
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="#">Log out</a>
+				</div>
+			</div>
+		</div>
+
+		<!--end of Top Navigation bar-->
+
+
+
+
+		<div class="mainbody">
+
+
+			
+			
+
+			 
+			<div id="inputContainer">
+				<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search in Biddera">
+			</div>
+				
+			<div class="box">   
+               
+ 
+                <div class="row" th:each="continent : ${continents}" >
+                
+                    
+                    
+                    <div class="column" >
+                      <h2 th:text="${continent}" >   this </h2>
+                      <p>Keeping gloves used by Kumar Sangakara in worldcup final 2007</p>
+                      <p>Starting Bid: 10000Rs</p>
+                      <p>Current maximum bid: 1000000Rs</p>
+                      <p>Bid ending Date: 10/10/2000</p>
+                    </div>
+                    
+                </div>
+            
+                <hr>
+            
+                
+
+			</div>
+			
+		</div>
+
+
+
+
+	</section>
+
+</body>
+</html>
+

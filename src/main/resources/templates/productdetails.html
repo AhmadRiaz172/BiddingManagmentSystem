@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tutorial</title>
+    <!-- Fonts -->
+  
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{style3.css}">
+    <meta name="robots" content="noindex,follow" />
+
+  </head>
+  <script>
+
+	function fun(){
+		alert("Hello! I am an alert box!!");
+		var a = document.getElementById("i").value;
+		document.getElementById("i").min = "5";
+	}
+
+  </script>  
+
+
+  <body style=  "background-color:  white;">
+	<div class="navbar">
+		<img style = "float:left;margin:0;"  src="source_images/logo.png">
+	  
+		<a href="/allproducts">Home</a>
+		
+		<div class="dropdown">
+		  <button class="dropbtn">Buyer
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<a href="/mybids">My bids</a>
+		  </div>
+		</div>
+	  
+		  <div class="dropdown">
+		  <button class="dropbtn">Seller
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<a href="/registerproduct">Register product</a>
+			<a href="/myregisteredproducts">My products</a>
+		  </div>
+		</div>
+	  
+		
+		<a href="#">About Us</a>
+		<a href="#">Contact Us</a>
+		
+		
+		 <div style="float:right;" class="dropdown">
+		  <button class="dropbtn">Account
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<a href="/editprofile">Edit profile</a>
+			<a href="#">Liked</a>
+			<a href="#">Wallet</a>
+			<a href="/logout">Log out</a>
+		  </div>
+		</div>
+		
+	  </div>
+	  
+
+    <main  class="container">
+
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column">
+        <img data-image="red" class="active" src="source_images/2.png" alt="">
+      </div>
+
+
+      <!-- Right Column -->
+      <div  th:object="${details}" class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+		<span th:text="*{category}" ></span>
+		<h1 th:text="*{name}">Beats EP</h1>
+		<p th:text="*{description}" ></p>
+		
+		<div>
+			<h4 style="float: left">Current maximum bid</h4>
+			<h4 style="float: right" th:text="*{maxbid}" >-</h4>
+		</div>
+		<div style = "clear:both;" ></div>
+		
+		<div>
+			<h4 style="float: left">Number of bids</h4>
+			<h4 style="float: right" th:text="*{numberofbids}"  >-</h4>
+		</div>
+		
+		<div style = "clear:both;" ></div>
+		
+		
+		<div>
+			<h4 style="float: left">Bid ending date</h4>
+			<h4 th:text="*{bidendingdate}" style="float: right">20-10-2020</h4>
+		</div>
+		<div style = "clear:both;" ></div>
+		
+		
+	
+		
+		</div>
+
+        <!-- Product Configuration -->
+		<form  style="margin-top: 120px;" th:action="@{/mybid}" th:object="${Bid}" method="post" class="form-inline"  >
+			<input  style="float: left;" step="100" th:field="*{b}" type="number" id="i" name="i"  >
+			<button  style="float: right;" type="submit">Place bid</button>
+			<div style = "clear:both;" ></div>
+		  
+		</form>
+
+        <!-- Product Pricing -->
+        
+	  </div>
+	  
+    </main>
+
+    <!-- Scripts -->
+ 
+    <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>

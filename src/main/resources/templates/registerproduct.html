@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Register product</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+    <meta charset="UTD-8" ; <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section class="app">
+        <!--Top Navigation bar-->
+        <div class="navbar">
+			<img style = "float:left;margin:0;"  src="source_images/logo.png">
+		  
+			<a href="/allproducts">Home</a>
+			
+			<div class="dropdown">
+			  <button class="dropbtn">Buyer
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="/mybids">My bids</a>
+			  </div>
+			</div>
+		  
+			  <div class="dropdown">
+			  <button class="dropbtn">Seller
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="/registerproduct">Register product</a>
+				<a href="/myregisteredproducts">My products</a>
+			  </div>
+			</div>
+		  
+			
+			<a href="#">About Us</a>
+			<a href="#">Contact Us</a>
+			
+			
+			 <div style="float:right;" class="dropdown">
+			  <button class="dropbtn">Account
+				<i class="fa fa-caret-down"></i>
+			  </button>
+			  <div class="dropdown-content">
+				<a href="/editprofile">Edit profile</a>
+				<a href="#">Liked</a>
+				<a href="#">Wallet</a>
+				<a href="/logout">Log out</a>
+			  </div>
+			</div>
+			
+		  </div>
+		  
+
+
+        <!--end of Top Navigation bar-->
+
+        <div class="mainbody">
+
+
+            <form action="#" th:action="@{/registerproduct}" th:object="${registerproduct}" method="post">
+
+                <div class="header">
+                    <h1>Register Product</h1>
+                </div>
+                <h3>Name</h3>
+                <input type="text" th:field="*{name}" placeholder="Enter product name..." id="name" name="name" required>
+                <h3>Category</h3>
+                
+                <select id="category" th:field="*{category}" name="category" required>
+                    <option value="0"> Select product category </option>
+                    <option value="1"> Electronic devices </option>
+                    <option value="2"> Electronic accessories </option>
+                    <option value="3"> TV and home appliances </option>
+                    <option value="4"> Health and beauty </option>
+                    <option value="5"> Groceries and pet </option>
+                    <option value="6"> Home and lifestyle </option>
+                    <option value="7"> Women fashion </option>
+                    <option value="8"> Men's fashion </option>
+                    <option value="9"> Watches bag and jewelry </option>
+                    <option value="10"> Sports and outdoor </option>
+                    <option value="11"> Automotive and bikes </option>
+
+
+
+
+                </select>
+                <h3>Short descriprtion</h3>
+                <input type="text" th:field="*{description}" placeholder="Enter short descriptio..." id="description" name="description">
+                <h3>Image</h3>
+                <input type="file" th:field="*{image}"  name="img" onchange="url(this)" accept="image/*" required>
+                <hr>
+                <h3>Minimum bid</h3>
+                <input type="number" th:field="*{minbid}" placeholder="Minimum bid ..." id="minbid" name="minbid">
+                
+                <h3>Bid ending date and time</h3>
+                <input type="datetime-local" th:field="*{dateTime}"/>
+
+
+                <button class="button" type="submit" name="submit" value="submit!">Register</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

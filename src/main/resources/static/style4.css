@@ -1,0 +1,368 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+@import url(https://use.fontawesome.com/releases/v5.0.7/css/all.css); 
+
+body {
+  font-family: "Lato";
+  font-size: 100%;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #ebebeb;
+  
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+a:hover {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.app {
+  
+	font-family: "Lato";
+	height: 100vh;
+}
+
+
+	   
+/*--------------
+----TOP BAR-----
+---------------*/
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color:#466785;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 22px 26px ;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  padding: 8px 26px ;  
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+ 
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #356088;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Style the links inside the navigation bar */
+	
+
+/* Style the links inside the navigation bar */
+
+/* Style the links inside the navigation bar */
+	   
+/*-------------------
+-----MAIN BODY-------
+--------------------*/
+
+
+.mainbody{
+  
+  left : 0%;
+  height: 95%;
+  margin-top: 4%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  
+ 
+}	   
+
+#myInput {
+  
+  background-image: url('source_images/search.jpg');
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  display: block;
+  width: 33%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 42px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin:0 auto;
+  border-radius: 5px;
+  margin-bottom: 25px;
+
+}
+
+#myInput:focus{
+	outline-width: 0;
+}
+
+
+
+#myTable i{
+  padding-top:5px ;
+	padding-left:  5px;
+}
+
+.button {
+  
+  margin-top: 30px;
+  border: none;
+  color: white;
+  transition-duration: 0.4s;
+  width: 21%;
+  height: 15%;
+  margin-right: 25px;
+ }
+
+
+/* boxes for main screen  */
+
+.mainbody .header{
+	position: relative;
+	margin-left:5%;
+	margin-bottom:13px;	
+	color: rgb(22, 23, 31);
+  width: 90%;
+	height: 6%;
+}
+
+.mainbody .header h1{
+  font-size: 5ex;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+
+
+
+.box{
+	 
+  display: inline-block;
+  border: none;
+  color: white;
+  transition-duration: 0.4s;
+  width: 70%;
+  margin-left: 0 auto ;
+  color: white;
+   background-color: white;
+   
+}
+
+
+
+.column {
+  	height:220px;
+  text-align:left;
+  color:black;
+  float: right;
+  width: 70%;
+  
+}
+.columnimg {
+	height:220px;
+ 
+  background-color:white;
+  float: left;
+  width: 30%;
+  margin-bottom: 12px;
+  
+}
+
+
+
+.column h2{
+
+	padding-left: 13px;
+	color: blue;
+  font-weight: bold;
+  font-size: xx-large;
+  padding-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.column span{
+
+  padding-left: 13px;
+  font-size: large;
+ padding-top: 0px;
+padding-bottom: 0px;
+  font-weight: bold;
+
+}
+
+.column p{
+  padding-left: 13px;
+  font-size: large;
+ padding-top: 0px;
+padding-bottom: 0px;
+  font-weight: bold;
+}
+
+
+
+.column:hover{
+	background-color:gainsboro;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.img{
+	
+	float: left;
+}
+
+
+
+
+/*-----TABLE SETTINGS------*/
+#myTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
+  white-space: nowrap;
+}
+
+#myTable td, #myTable th {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+#myTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#myTable tr:hover {background-color: #ddd;}
+
+
+#myTable th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: #355069;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,304 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+@import url(https://use.fontawesome.com/releases/v5.0.7/css/all.css); 
+
+body {
+  font-family: "Lato";
+  font-size: 100%;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #ebebeb;
+  
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+a:hover {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.app {
+  background-image: url("source_images/1.png");
+	font-family: "Lato";
+	height: 100vh;
+}
+
+
+	   
+/*--------------
+----TOP BAR-----
+---------------*/
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color:#466785;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 22px 26px ;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+  padding: 8px 26px ;  
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+ 
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #356088;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Style the links inside the navigation bar */
+	
+
+/* Style the links inside the navigation bar */
+	   
+/*-------------------
+-----MAIN BODY-------
+--------------------*/
+
+
+.mainbody{
+  position : relative; 
+  left : 0%;
+  height: 95%;
+  top : 5%;
+  width: 100%;
+  display: block;
+  text-align: center;
+ 
+}	   
+
+#myInput {
+
+  background-image: url('search.jpg');
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  display: block;
+  position : flex;
+  width: 27%; /* Full-width */
+  height: 6%;
+  margin-bottom: 1.2em;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 42px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-left: 34%;  
+  border-radius: 15px;
+}
+
+#myInput:focus{
+	outline-width: 0;
+}
+
+
+
+#myTable i{
+  padding-top:5px ;
+	padding-left:  5px;
+}
+
+.button {
+  
+  margin-top: 30px;
+  border: none;
+  color: white;
+  transition-duration: 0.4s;
+  width: 21%;
+  height: 15%;
+  margin-right: 25px;
+ }
+
+
+/* boxes for main screen  */
+
+.button{
+	display: block;
+	color: whitesmoke;
+	font-size: 20px;
+  padding: 10px 24px;
+ 	background-color:#0c6cb0;
+	cursor: pointer;
+  border-radius: 20px;
+  margin-left: 40%;
+  
+}
+.button:hover{
+  background-color:#0b4e7e;
+
+}
+
+
+.mainbody .header{
+	position: relative;
+	margin-left:5%;
+	margin-bottom:13px;	
+	color: rgb(22, 23, 31);
+  width: 90%;
+	height: 6%;
+}
+
+.mainbody .header h1{
+  font-size: 5ex;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+
+
+/*-------------- forms ------------*/
+/* Style inputs */
+form{
+  background-color: #66b0e4;
+  width: 50%;
+  margin-left: 25%;
+}
+
+input, select,options {
+    position: relative;
+    width: 50%;
+    display: inline-block;
+    padding: 12px 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    border: 1px solid rgb(190, 197, 211);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+hr {
+
+  width: 70%;
+
+}
+
+
+
+
+.btn {
+  background-color: inherit;
+  border: none; /* Remove borders */
+  color: black; /* White text */
+  font-size: 18px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  padding-right: 0cm;
+  padding-left: 0cm;
+}
+
+
+h3{
+  color: rgb(243, 243, 243);
+  padding-bottom: 0em;
+  margin-bottom: 0%;
+  padding-top: 0em;
+  margin-top: 0%;
+}
